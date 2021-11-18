@@ -1,0 +1,96 @@
+.wrapper {
+  /* Make the display flex, flow should be row and wrap, and align the text centered */
+Display:flex;
+flex-flow: row wrap;
+text-align: center;
+}
+
+.wrapper > * {
+  /* padding & margin should be 10px all around*/
+  padding: 10px
+  margin: 10px
+  /* flex grow will be set to 1 and shrink 100% USE SHORTHAND */
+  flex: 1 100%;
+  /* round the edges of the divs using border radius */
+border-radius: 20;
+}
+
+.header {
+  /* Make the background color 'tomato' */
+  background-color: green;
+  /* 120 pixels high */
+height: 120;
+}
+
+.footer {
+  /* Make the background color 'lightgreen' */
+  background-color: lightgreen;
+  /* 80 pixels high */
+
+}
+
+.main {
+  /* Align text to the left */
+  text-align: left;
+  /* Make the background color 'deepskyblue' */
+  background-color: deepskyblue;
+  /* Height should be 300 pixels */
+  height: 300px
+  /* Font size should be 24 pixels */
+  font-size: 24px;
+
+}
+
+.aside1 {
+  /* Make the background color 'gold' */
+background-color: gold;
+}
+
+.aside2 {
+  /* Make the background color 'hotpink' */
+
+}
+
+/* MEDIA QUERY FOR SCREENS 800PX WIDE AND LARGER */
+@media all and (min-width: 600px){
+  /* CHANGE UP THE ORDER OF EACH CLASS TO SEE WHAT LOOKS BEST */
+  /* CHANGE BACKGROUND COLORS AND MORE!! */
+  .aside{
+    flex:1;
+    background-color: red;
+
+  }
+  .main {
+  background-color: green;
+  }
+  .aside1 {
+  background-color: blue;
+  }
+  .aside2 {
+  background-color: orange;
+  }
+  .footer {
+  background-color: purple; 
+  }
+}
+@media all and (min-width: 800px){
+  /* CHANGE UP THE ORDER OF EACH CLASS TO SEE WHAT LOOKS BEST */
+  /* CHANGE BACKGROUND COLORS AND MORE!! */
+  .main {
+    flex: 3;
+    background-color: teal;
+  }
+  .aside1 {
+background-color: red;
+order: 1;
+  }
+  .aside2 {
+background-color: purple;
+order: 3;
+  }
+  .footer {
+background-color: green;
+order: 4;
+  }
+}
+/* MEDIA QUERY FOR SCREENS 600PX WIDE TO 800PX (800 b/c of our media query above) */
